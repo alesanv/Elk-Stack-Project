@@ -95,7 +95,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![alt text](Images/Project1-elk-docker-running.png "ELK container running")
+![alt text](Images/Project1-elk-docker-running.PNG "ELK container running")
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -136,15 +136,15 @@ SSH into the control node and follow the steps below:
 You should see a page like the following:
 
 - Kibana:
-![alt text](/Images/Project1-kibana.png "Kibana")
+![alt text](Images/Project1-kibana.PNG "Kibana")
 
 
 - Filebeat:
-![alt text](/Images/Project-Filebeat.png "Filebeat")
+![alt text](Images/Project-Filebeat.PNG "Filebeat")
 
 
 - Metricbeat:
-![alt text](/Images/Project1-MetricBeat.png "Metricbeat")
+![alt text](Images/Project1-MetricBeat.PNG "Metricbeat")
 
 
 
