@@ -1,0 +1,41 @@
+---
+- name: activity ansible playbooks
+  hosts: webservers
+  become: true
+  tasks:
+
+  # install docker
+  - name: Install docker
+    apt:
+      force_apt_get: yes
+      update_cache: true
+      name: docker.io
+      state: present
+
+  # install python3
+  - name: Install python3
+    apt:
+      force_apt_get: yes
+      name: python3-pip
+      state: present
+
+  # install docker using pip
+  - name: Install docker using pip
+    pip:
+      name: docker
+
+  # install dvwa container in the VMs
+  - name: Install cyberxsecurity/dvwa container
+    docker_container:
+      name: dvwa
+      image: cyberxsecurity/dvwa
+      state: started
+      restart_policy: always
+      published_ports: 80:80
+
+  # enable docker on boot
+  - name: Enable docker service
+    systemd:
+      name: docker
+      enabled: yes
+
